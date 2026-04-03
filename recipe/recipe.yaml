@@ -10,7 +10,7 @@ source:
   sha256: 75bd5efbb52868a7b9ad456c45638722660c52fea93df5ff40c129f997111faa
 
 build:
-  number: 0
+  number: 1
   script:
     env:
       CARGO_PROFILE_RELEASE_STRIP: symbols
@@ -39,8 +39,10 @@ requirements:
 
 tests:
   - script:
-      - spider --help
-      - spider --version
+      - if: build_platform == host_platform
+        then:
+          - spider --help
+          - spider --version
   - package_contents:
       bin:
         - spider
