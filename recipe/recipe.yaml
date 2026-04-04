@@ -39,10 +39,8 @@ requirements:
 
 tests:
   - script:
-      - if: build_platform == host_platform
-        then:
-          - spider --help
-          - spider --version
+      - spider --help
+      - spider --version
   - package_contents:
       bin:
         - spider
