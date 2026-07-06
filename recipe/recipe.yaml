@@ -1,5 +1,5 @@
 context:
-  version: "2.48.13"
+  version: "2.52.2"
 
 package:
   name: spider_cli
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/spider-rs/spider/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: 75bd5efbb52868a7b9ad456c45638722660c52fea93df5ff40c129f997111faa
+  sha256: 130a9d6040a05a3c4d219fcd296f7f20ba6f7c90a8e18914b7d0f647db7908fa
 
 build:
-  number: 1
+  number: 0
   script:
     env:
       CARGO_PROFILE_RELEASE_STRIP: symbols
