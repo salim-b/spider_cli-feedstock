@@ -37,11 +37,10 @@ requirements:
     - ${{ compiler('rust') }}
     - cargo-auditable
     - cargo-bundle-licenses
-    - cmake
-    - if: host_platform == "win-64"
-      then: clang
     - if: unix
       then: pkg-config
+    - if: win
+      then: cmake
   host:
     - if: linux
       then: openssl
