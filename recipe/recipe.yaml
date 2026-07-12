@@ -43,7 +43,8 @@ requirements:
     - if: unix
       then: pkg-config
   host:
-    - openssl
+    - if: linux
+      then: openssl
 
 tests:
   - script:
